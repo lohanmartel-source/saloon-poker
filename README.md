@@ -1,4 +1,4 @@
-# 🤠 Saloon Poker
+﻿# 🤠 Saloon Poker
 
 Un petit site de **Texas Hold'em** à l'ambiance saloon western. Il fait deux choses :
 
@@ -7,7 +7,7 @@ Un petit site de **Texas Hold'em** à l'ambiance saloon western. Il fait deux ch
 
 Tout tourne dans le navigateur. Pas de serveur, pas de compte, pas d'argent réel.
 
-👉 **Jouer en ligne :** `https://<ton-pseudo>.github.io/saloon-poker/`
+👉 **Jouer en ligne :** `https://lohanmartel-source.github.io/saloon-poker/`
 
 ---
 
@@ -54,12 +54,12 @@ Sur téléphone : ouvre le site, puis choisis **Ajouter à l'écran d'accueil** 
    git add .
    git commit -m "Saloon Poker"
    git branch -M main
-   git remote add origin https://github.com/<ton-pseudo>/saloon-poker.git
+   git remote add origin https://github.com/lohanmartel-source/saloon-poker.git
    git push -u origin main
    ```
 3. Sur GitHub, va dans **Settings → Pages**.
 4. Sous **Branch**, choisis `main` et le dossier `/ (root)`, puis clique **Save**.
-5. Attends environ 1 minute. Le site est alors à `https://<ton-pseudo>.github.io/saloon-poker/`.
+5. Attends environ 1 minute. Le site est alors à `https://lohanmartel-source.github.io/saloon-poker/`.
 
 ## Structure
 
@@ -76,3 +76,4 @@ icon.svg              icône
 ## Licence
 
 MIT. Projet de fan sans lien avec un éditeur de jeux vidéo.
+
