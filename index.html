@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1f130b">
+<meta name="description" content="Conseiller de poker Texas Hold'em et table de jeu contre 3 adversaires, ambiance saloon western.">
+<title>Saloon Poker</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="sign">
+    <div class="stars">★ ★ ★</div>
+    <h1>Saloon Poker</h1>
+    <div class="tag">Texas Hold'em · Conseiller &amp; Table</div>
+  </div>
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-tab="adv" class="on">Conseiller</button>
+    <button role="tab" data-tab="play">Jouer vs 3</button>
+  </nav>
+</header>
+
+<main>
+<!-- ===== Conseiller ===== -->
+<section id="adv" class="view">
+  <div class="parchment">
+    <div class="hand-row">
+      <div>
+        <div class="lbl">Ta main</div>
+        <div class="slots" id="hole"></div>
+      </div>
+      <div class="grow">
+        <div class="lbl">La table</div>
+        <div class="slots" id="board"></div>
+      </div>
+    </div>
+
+    <div class="picker" id="picker"></div>
+
+    <div class="fields">
+      <div class="field">
+        <span>Adversaires</span>
+        <div class="step"><button id="oppM" aria-label="Moins">−</button><b id="oppN">3</b><button id="oppP" aria-label="Plus">+</button></div>
+      </div>
+      <label class="field"><span>Pot actuel</span><input id="pot" type="number" inputmode="numeric" value="0" min="0"></label>
+      <label class="field"><span>À suivre</span><input id="call" type="number" inputmode="numeric" value="0" min="0"></label>
+    </div>
+    <div class="row">
+      <button class="btn ghost" id="undo">↶ Retirer</button>
+      <button class="btn ghost" id="clr">Nouvelle main</button>
+    </div>
+  </div>
+
+  <div class="parchment result" id="res"></div>
+</section>
+
+<!-- ===== Table ===== -->
+<section id="play" class="view" hidden>
+  <div class="tablebar">
+    <span id="info"></span>
+    <button class="icon" id="openSet" aria-label="Réglages">⚙</button>
+  </div>
+
+  <div class="rail">
+    <div class="felt">
+      <div class="opps" id="opps"></div>
+      <div class="center">
+        <div class="pot"><span class="chip-ico"></span><span id="potv">0</span></div>
+        <div class="board" id="pboard"></div>
+        <div class="msg" id="msg"></div>
+      </div>
+      <div id="meSeat"></div>
+    </div>
+  </div>
+
+  <div id="advBox"></div>
+  <div class="actionbar" id="ctrl"></div>
+
+  <details class="journal">
+    <summary>Journal de la partie</summary>
+    <div id="log"></div>
+  </details>
+</section>
+</main>
+
+<!-- ===== Réglages ===== -->
+<div class="modal" id="setModal" hidden>
+  <div class="parchment sheet">
+    <h2>Réglages</h2>
+    <label class="field"><span>Ton nom</span><input id="sName" maxlength="14" placeholder="Toi"></label>
+    <label class="field"><span>Jetons de départ</span>
+      <select id="sStack"><option value="500">500</option><option value="1000">1000</option><option value="2000">2000</option><option value="5000">5000</option></select></label>
+    <label class="field"><span>Vitesse des adversaires</span>
+      <select id="sSpeed"><option value="1200">Lente</option><option value="750">Normale</option><option value="350">Rapide</option></select></label>
+    <label class="check"><input type="checkbox" id="sAdv"> Conseils automatiques à mon tour</label>
+    <label class="check"><input type="checkbox" id="sBlinds"> Blindes qui montent (toutes les 10 mains)</label>
+    <label class="check"><input type="checkbox" id="sSound"> Sons</label>
+
+    <h3>Carnet</h3>
+    <div class="stats-grid" id="statsBox"></div>
+
+    <div class="row">
+      <button class="btn ghost" id="resetStats">Effacer le carnet</button>
+      <button class="btn ghost" id="restart">Nouvelle partie</button>
+    </div>
+    <button class="btn brass" id="closeSet">Fermer</button>
+  </div>
+</div>
+
+<footer class="foot">Fait pour jouer entre amis · aucun argent réel</footer>
+
+<script src="js/engine.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

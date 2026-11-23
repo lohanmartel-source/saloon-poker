@@ -1,0 +1,11 @@
+{
+  "name": "Saloon Poker",
+  "short_name": "Saloon Poker",
+  "description": "Conseiller Texas Hold'em et table contre 3 adversaires.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#1f130b",
+  "theme_color": "#1f130b",
+  "lang": "fr",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
